@@ -24,7 +24,7 @@ class Note
     
     // MARK: - Private
     // data
-    static func fetchInterests() -> [Note]
+    static func fetchNotes() -> [Note]
     {
         return [
             Note(title: "Travelling Around the World", featuredImage: UIImage(named: "f1")!, color: UIColor(red: 63/255.0, green: 71/255.0, blue: 80/255.0, alpha: 0.8)),
