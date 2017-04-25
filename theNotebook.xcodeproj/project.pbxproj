@@ -12,6 +12,7 @@
 		9DAC18BF1EAFF8FC002D5EED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC18BD1EAFF8FC002D5EED /* Main.storyboard */; };
 		9DAC18C11EAFF8FC002D5EED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC18C01EAFF8FC002D5EED /* Assets.xcassets */; };
 		9DAC18C41EAFF8FC002D5EED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC18C21EAFF8FC002D5EED /* LaunchScreen.storyboard */; };
+		9DAC18CD1EAFF983002D5EED /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC18CC1EAFF983002D5EED /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9DAC18C01EAFF8FC002D5EED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DAC18C31EAFF8FC002D5EED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DAC18C51EAFF8FC002D5EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DAC18CC1EAFF983002D5EED /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		9DAC18B81EAFF8FC002D5EED /* theNotebook */ = {
 			isa = PBXGroup;
 			children = (
+				9DAC18CB1EAFF967002D5EED /* Model */,
 				9DAC18B91EAFF8FC002D5EED /* AppDelegate.swift */,
 				9DAC18BB1EAFF8FC002D5EED /* ViewController.swift */,
 				9DAC18BD1EAFF8FC002D5EED /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				9DAC18C51EAFF8FC002D5EED /* Info.plist */,
 			);
 			path = theNotebook;
+			sourceTree = "<group>";
+		};
+		9DAC18CB1EAFF967002D5EED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC18CC1EAFF983002D5EED /* Note.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DAC18BC1EAFF8FC002D5EED /* ViewController.swift in Sources */,
+				9DAC18CD1EAFF983002D5EED /* Note.swift in Sources */,
 				9DAC18BA1EAFF8FC002D5EED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +316,7 @@
 				9DAC18CA1EAFF8FC002D5EED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
