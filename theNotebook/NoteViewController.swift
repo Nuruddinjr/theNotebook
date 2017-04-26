@@ -32,6 +32,7 @@ class NoteViewController: UIViewController, UICollectionViewDelegate {
                                                     bottom: insetY, right: insetX)
         collectionView?.dataSource = self
         collectionView?.delegate = self
+
         
     }
     
@@ -76,4 +77,6 @@ extension NoteViewController: UIScrollViewDelegate
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.pointee = offset
     }
+    
+    
 }

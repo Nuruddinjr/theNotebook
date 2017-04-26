@@ -152,7 +152,7 @@
         <!--DetailViewController-->
         <scene sceneID="Ydv-g1-ETn">
             <objects>
-                <viewController id="Y0m-oF-LZF" userLabel="DetailViewController" sceneMemberID="viewController">
+                <viewController id="Y0m-oF-LZF" userLabel="DetailViewController" customClass="NoteDetailViewController" customModule="theNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hMX-xM-lK5"/>
                         <viewControllerLayoutGuide type="bottom" id="y00-sC-okr"/>
@@ -213,6 +213,10 @@
                             <constraint firstItem="D8g-sP-kQz" firstAttribute="trailing" secondItem="BOw-5t-7y7" secondAttribute="trailing" id="zWF-GE-Nbh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NoteBody" destination="xZj-tw-mrU" id="oDU-27-a9c"/>
+                        <outlet property="NoteTitle" destination="D8g-sP-kQz" id="X46-30-eQq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krM-XM-wIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

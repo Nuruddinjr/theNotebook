@@ -11,4 +11,7 @@ import UIKit
 
 class NoteDetailViewController: UIViewController {
     
+    @IBOutlet weak var NoteTitle: UILabel!
+    @IBOutlet weak var NoteBody: UITextView!
+    
 }
