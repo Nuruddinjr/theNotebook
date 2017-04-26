@@ -115,6 +115,7 @@
                                             <outlet property="backgroundColorView" destination="smX-oD-510" id="BQ6-0u-nME"/>
                                             <outlet property="featuredImageView" destination="cUc-B3-pKR" id="D3q-Oa-E0K"/>
                                             <outlet property="noteTitleLabel" destination="gAu-3L-yhE" id="81t-U1-FPy"/>
+                                            <segue destination="Y0m-oF-LZF" kind="showDetail" id="4lo-Ft-3wb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -147,6 +148,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ydv-g1-ETn">
+            <objects>
+                <viewController id="Y0m-oF-LZF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hMX-xM-lK5"/>
+                        <viewControllerLayoutGuide type="bottom" id="y00-sC-okr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2VG-lP-ZhH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We love travelling around the world" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8g-sP-kQz">
+                                <rect key="frame" x="16" y="36" width="343" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="9pk-nh-zYj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOw-5t-7y7">
+                                <rect key="frame" x="16" y="131" width="343" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Xam-TD-s3f"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xZj-tw-mrU">
+                                <rect key="frame" x="16" y="140" width="343" height="482"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</mutableString>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fd4-DM-ghC">
+                                <rect key="frame" x="16" y="621" width="38" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="cPZ-9e-t2A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="y00-sC-okr" firstAttribute="top" secondItem="Fd4-DM-ghC" secondAttribute="bottom" constant="16" id="4Xy-Jw-0ZJ"/>
+                            <constraint firstItem="D8g-sP-kQz" firstAttribute="trailing" secondItem="xZj-tw-mrU" secondAttribute="trailing" id="PHZ-nc-RZD"/>
+                            <constraint firstItem="xZj-tw-mrU" firstAttribute="leading" secondItem="2VG-lP-ZhH" secondAttribute="leading" constant="16" id="PZp-yR-a1n"/>
+                            <constraint firstItem="xZj-tw-mrU" firstAttribute="top" secondItem="BOw-5t-7y7" secondAttribute="bottom" constant="8" symbolic="YES" id="RuS-P1-BP8"/>
+                            <constraint firstItem="D8g-sP-kQz" firstAttribute="leading" secondItem="xZj-tw-mrU" secondAttribute="leading" id="Xd1-Od-yj4"/>
+                            <constraint firstItem="Fd4-DM-ghC" firstAttribute="leading" secondItem="2VG-lP-ZhH" secondAttribute="leading" constant="16" id="YCo-uu-Sr7"/>
+                            <constraint firstItem="y00-sC-okr" firstAttribute="top" secondItem="xZj-tw-mrU" secondAttribute="bottom" constant="45" id="gmd-ec-g2e"/>
+                            <constraint firstItem="BOw-5t-7y7" firstAttribute="leading" secondItem="2VG-lP-ZhH" secondAttribute="leading" constant="16" id="h0Z-oB-So0"/>
+                            <constraint firstAttribute="trailing" secondItem="BOw-5t-7y7" secondAttribute="trailing" constant="16" id="iYt-si-5i7"/>
+                            <constraint firstAttribute="trailing" secondItem="xZj-tw-mrU" secondAttribute="trailing" constant="16" id="rfZ-L5-53O"/>
+                            <constraint firstItem="D8g-sP-kQz" firstAttribute="leading" secondItem="BOw-5t-7y7" secondAttribute="leading" id="s1H-wA-viM"/>
+                            <constraint firstItem="D8g-sP-kQz" firstAttribute="top" secondItem="hMX-xM-lK5" secondAttribute="bottom" constant="16" id="wjJ-HJ-UPb"/>
+                            <constraint firstItem="BOw-5t-7y7" firstAttribute="top" secondItem="D8g-sP-kQz" secondAttribute="bottom" constant="16" id="yjA-oe-8mM"/>
+                            <constraint firstItem="D8g-sP-kQz" firstAttribute="trailing" secondItem="BOw-5t-7y7" secondAttribute="trailing" id="zWF-GE-Nbh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="krM-XM-wIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877.60000000000002" y="123.68815592203899"/>
         </scene>
     </scenes>
     <resources>

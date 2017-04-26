@@ -14,6 +14,7 @@ class Note
     var title = ""
     var featuredImage: UIImage
     var color: UIColor
+    var description = ""
     
     init(title: String, featuredImage: UIImage, color: UIColor)
     {
