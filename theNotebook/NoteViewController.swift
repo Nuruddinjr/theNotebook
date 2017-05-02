@@ -9,10 +9,13 @@
 import UIKit
 
 class NoteViewController: UIViewController, UICollectionViewDelegate {
+   
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var notes = Note.fetchNotes()
-    
+    var selectedIndex = 0
     
     let cellScale:CGFloat = 0.6
     
@@ -36,6 +39,15 @@ class NoteViewController: UIViewController, UICollectionViewDelegate {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if (self.selectedIndex != 0) {
+            print(self.selectedIndex)
+        }
+        
+    }
     
 }
 
@@ -77,6 +89,8 @@ extension NoteViewController: UIScrollViewDelegate
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.pointee = offset
     }
+    
+    
     
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D9A63BB1EB8311700E78094 /* NoteAddDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A63BA1EB8311700E78094 /* NoteAddDetailTableViewController.swift */; };
+		9D9A63BE1EB83CA800E78094 /* theNotebook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A63BC1EB83CA800E78094 /* theNotebook.xcdatamodeld */; };
 		9DAC18BA1EAFF8FC002D5EED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC18B91EAFF8FC002D5EED /* AppDelegate.swift */; };
 		9DAC18BC1EAFF8FC002D5EED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC18BB1EAFF8FC002D5EED /* ViewController.swift */; };
 		9DAC18BF1EAFF8FC002D5EED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC18BD1EAFF8FC002D5EED /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D9A63BA1EB8311700E78094 /* NoteAddDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteAddDetailTableViewController.swift; sourceTree = "<group>"; };
+		9D9A63BD1EB83CA800E78094 /* theNotebook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = theNotebook.xcdatamodel; sourceTree = "<group>"; };
 		9DAC18B61EAFF8FC002D5EED /* theNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DAC18B91EAFF8FC002D5EED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DAC18BB1EAFF8FC002D5EED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,8 +68,10 @@
 			children = (
 				9DAC18CB1EAFF967002D5EED /* Model */,
 				9DAC18B91EAFF8FC002D5EED /* AppDelegate.swift */,
+				9D9A63BC1EB83CA800E78094 /* theNotebook.xcdatamodeld */,
 				9DAC18BB1EAFF8FC002D5EED /* ViewController.swift */,
 				9DAC18BD1EAFF8FC002D5EED /* Main.storyboard */,
+				9D9A63BA1EB8311700E78094 /* NoteAddDetailTableViewController.swift */,
 				9DAC18C01EAFF8FC002D5EED /* Assets.xcassets */,
 				9DAC18C21EAFF8FC002D5EED /* LaunchScreen.storyboard */,
 				9DAC18C51EAFF8FC002D5EED /* Info.plist */,
@@ -159,9 +165,11 @@
 			files = (
 				9DAC18CF1EB0063D002D5EED /* NoteCollectionViewCell.swift in Sources */,
 				9DAC18BC1EAFF8FC002D5EED /* ViewController.swift in Sources */,
+				9D9A63BE1EB83CA800E78094 /* theNotebook.xcdatamodeld in Sources */,
 				9DAC18CD1EAFF983002D5EED /* Note.swift in Sources */,
 				9DAC18D31EB0F52E002D5EED /* NoteDetailViewController.swift in Sources */,
 				9DAC18D11EB0088E002D5EED /* NoteViewController.swift in Sources */,
+				9D9A63BB1EB8311700E78094 /* NoteAddDetailTableViewController.swift in Sources */,
 				9DAC18BA1EAFF8FC002D5EED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +339,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9D9A63BC1EB83CA800E78094 /* theNotebook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9D9A63BD1EB83CA800E78094 /* theNotebook.xcdatamodel */,
+			);
+			currentVersion = 9D9A63BD1EB83CA800E78094 /* theNotebook.xcdatamodel */;
+			path = theNotebook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9DAC18AE1EAFF8FC002D5EED /* Project object */;
 }
