@@ -13,6 +13,8 @@ class NoteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var noteTitleLabel: UILabel!
     @IBOutlet weak var backgroundColorView: UIView!
     
+   
+    
     var note: Note?{
         didSet{
             self.updateUI()
@@ -23,6 +25,7 @@ class NoteCollectionViewCell: UICollectionViewCell {
     
     private func updateUI(){
         if let note = note {
+            
             featuredImageView.image = note.featuredImage
             noteTitleLabel.text = note.title
             backgroundColorView.backgroundColor = note.color

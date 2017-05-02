@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NoteAddDetailTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -15,6 +16,10 @@ class NoteAddDetailTableViewController: UITableViewController, UIImagePickerCont
     @IBOutlet weak var NoteTitle: UITextField!
     
     @IBOutlet weak var NoteTextView: UITextView!
+    
+    var managedObjectContext : NSManagedObjectContext? {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,14 +89,41 @@ class NoteAddDetailTableViewController: UITableViewController, UIImagePickerCont
     
     func saveNote(){
     
-        if NoteTitle.text!.isEmpty || NoteTextView.text!.isEmpty || NoteImage.image != nil {
+        if NoteTitle.text!.isEmpty || NoteTextView.text!.isEmpty || NoteImage.image == nil {
             let alertController = UIAlertController(title: "OOPS", message: "You need to give all the information, check for missing info", preferredStyle: .alert)
             
             alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alertController, animated: true, completion: nil)
             
         } else {
+                // Save note goes here
+            if let moc = managedObjectContext {
+                let note = NoteCD(context: moc)
+                note.noteTitle = NoteTitle.text!
+                note.noteText = NoteTextView.text!
+                
+                if let data = UIImageJPEGRepresentation(self.NoteImage.image!, 0.7){
+                    note.noteImage = data as NSData
+                }
+                saveToCoreData(){
+                    self.navigationController!.popToRootViewController(animated: true)
+                }
+            }
             
+            
+        }
+        
+    }
+    
+    func saveToCoreData(completion: @escaping () -> Void){
+        managedObjectContext?.perform {
+            do {
+                try self.managedObjectContext?.save()
+                print("Saved to CoreData")
+            } catch {
+                print("Error to save to Core Data \(error.localizedDescription)")
+            }
+
         }
         
         
