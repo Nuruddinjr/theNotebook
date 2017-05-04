@@ -53,7 +53,7 @@ class Note
         
         
     }
-    static func fetchNotes() -> [NoteCD]
+    static func fetchNotes() -> [Note]
         
     {
         

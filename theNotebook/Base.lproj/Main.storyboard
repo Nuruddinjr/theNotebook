@@ -343,7 +343,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1924" y="175.86206896551727"/>
+            <point key="canvasLocation" x="1945" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZCw-ll-IQj">
@@ -372,6 +372,6 @@
         <image name="f1" width="1080" height="1349"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oSA-gL-gmb"/>
+        <segue reference="bs5-bP-bwk"/>
     </inferredMetricsTieBreakers>
 </document>
