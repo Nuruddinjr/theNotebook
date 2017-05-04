@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="NoteCD" representedClassName="NoteCD" syncable="YES" codeGenerationType="class">
         <attribute name="noteImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="noteText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="noteTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <fetchRequest name="FetchNotes" entity="NoteCD" predicateString="(NOT FALSEPREDICATE) AND noteText CONTAINS &quot;&quot;"/>
     <elements>
-        <element name="NoteCD" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="NoteCD" positionX="2538" positionY="-3474" width="135" height="88"/>
+        <element name="Category" positionX="2734" positionY="-3466" width="128" height="73"/>
     </elements>
 </model>

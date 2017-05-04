@@ -57,8 +57,12 @@ class Note
         
     {
         
-//        let notes = [NoteCD]()
+        let notes = [NoteCD]()
         
+        for note in notes {
+            print(note)
+            UIImage(data: (note.noteImage!) as Data)
+        }
         
         
         return [
