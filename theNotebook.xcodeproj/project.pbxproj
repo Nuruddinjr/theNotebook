@@ -66,18 +66,14 @@
 		9DAC18B81EAFF8FC002D5EED /* theNotebook */ = {
 			isa = PBXGroup;
 			children = (
+				9DDC62481EBAB377008B0D26 /* ViewControllers */,
+				9DDC62471EBAB35D008B0D26 /* Delegate */,
+				9DDC62461EBAB34C008B0D26 /* Coredata */,
+				9DDC62451EBAB337008B0D26 /* Storyboards */,
+				9DDC62441EBAB308008B0D26 /* Managers */,
 				9DAC18CB1EAFF967002D5EED /* Model */,
-				9DAC18B91EAFF8FC002D5EED /* AppDelegate.swift */,
-				9D9A63BC1EB83CA800E78094 /* theNotebook.xcdatamodeld */,
-				9DAC18BB1EAFF8FC002D5EED /* ViewController.swift */,
-				9DAC18BD1EAFF8FC002D5EED /* Main.storyboard */,
-				9D9A63BA1EB8311700E78094 /* NoteAddDetailTableViewController.swift */,
 				9DAC18C01EAFF8FC002D5EED /* Assets.xcassets */,
-				9DAC18C21EAFF8FC002D5EED /* LaunchScreen.storyboard */,
 				9DAC18C51EAFF8FC002D5EED /* Info.plist */,
-				9DAC18CE1EB0063D002D5EED /* NoteCollectionViewCell.swift */,
-				9DAC18D01EB0088E002D5EED /* NoteViewController.swift */,
-				9DAC18D21EB0F52E002D5EED /* NoteDetailViewController.swift */,
 			);
 			path = theNotebook;
 			sourceTree = "<group>";
@@ -88,6 +84,50 @@
 				9DAC18CC1EAFF983002D5EED /* Note.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		9DDC62441EBAB308008B0D26 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		9DDC62451EBAB337008B0D26 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC18BD1EAFF8FC002D5EED /* Main.storyboard */,
+				9DAC18C21EAFF8FC002D5EED /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		9DDC62461EBAB34C008B0D26 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				9D9A63BC1EB83CA800E78094 /* theNotebook.xcdatamodeld */,
+			);
+			name = Coredata;
+			sourceTree = "<group>";
+		};
+		9DDC62471EBAB35D008B0D26 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC18B91EAFF8FC002D5EED /* AppDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		9DDC62481EBAB377008B0D26 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC18BB1EAFF8FC002D5EED /* ViewController.swift */,
+				9D9A63BA1EB8311700E78094 /* NoteAddDetailTableViewController.swift */,
+				9DAC18CE1EB0063D002D5EED /* NoteCollectionViewCell.swift */,
+				9DAC18D01EB0088E002D5EED /* NoteViewController.swift */,
+				9DAC18D21EB0F52E002D5EED /* NoteDetailViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
