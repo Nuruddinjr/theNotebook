@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NoteViewController: UIViewController, UICollectionViewDelegate {
    
@@ -14,7 +15,8 @@ class NoteViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var notes = Note.fetchNotes()
+    var note = Note.fetchNotes()
+    var notes: [NSManagedObject] = []
     var selectedIndex = 0
     
     let cellScale:CGFloat = 0.6
@@ -49,23 +51,51 @@ class NoteViewController: UIViewController, UICollectionViewDelegate {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //1
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "NoteCD")
+        
+        //3
+        do {
+            notes = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+
+    
 }
 
 
 extension NoteViewController : UICollectionViewDataSource{
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return notes.count
+        return note.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
+//        let note = notes[indexPath.row]
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NoteCell", for: indexPath) as! NoteCollectionViewCell
         
-        cell.note = notes[indexPath.item]
+        cell.note = note[indexPath.item]
         
         return cell
     }
@@ -92,5 +122,9 @@ extension NoteViewController: UIScrollViewDelegate
     
     
     
-    
 }
+
+
+
+
+

@@ -25,7 +25,6 @@ class NoteCollectionViewCell: UICollectionViewCell {
     
     private func updateUI(){
         if let note = note {
-            
             featuredImageView.image = note.featuredImage
             noteTitleLabel.text = note.title
             backgroundColorView.backgroundColor = note.color

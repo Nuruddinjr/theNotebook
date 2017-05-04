@@ -16,6 +16,8 @@ class Note
     var featuredImage: UIImage
     var color: UIColor
     var body = ""
+    var results = [NoteCD]()
+    var notes = [Note]()
     
     
     var managedObjectContext : NSManagedObjectContext? {
@@ -32,25 +34,28 @@ class Note
     
     // MARK: - Private
     //
-    //
-    func fetchNotesFromCoreData(completion:([NoteCD])-> Void)
-    {
-        let request: NSFetchRequest<NoteCD> = NoteCD.fetchRequest()
-        var results = [NoteCD]()
-        
-        do {
-            results = try  managedObjectContext!.fetch(request)
-            completion(results)
-        } catch
-        {
-            print("Error  on fetchin Core Data \(error.localizedDescription)")
-        }
-    
-    }
+//    //
+//    func fetchNotesFromCoreData(completion:([NoteCD])-> Void)
+//    {
+//        let request: NSFetchRequest<NoteCD> = NoteCD.fetchRequest()
+//        
+//        do {
+//            results = try  managedObjectContext!.fetch(request)
+//            completion(results)
+//        } catch
+//        {
+//            print("Error  on fetchin Core Data \(error.localizedDescription)")
+//        }
+//
+//        for note in results {
+//            notes.append(Note(title: note.noteTitle!, featuredImage: UIImage(named: "f1")!, color: UIColor(red: 63/255.0, green: 71/255.0, blue: 80/255.0, alpha: 0.8), body: note.noteTitle!))
+//
+//        }
+//    
+//    }
     
     static func fetchNotes() -> [Note]
     {
-        
         return [
             Note(title: "Travelling Around the World", featuredImage: UIImage(named: "f1")!, color: UIColor(red: 63/255.0, green: 71/255.0, blue: 80/255.0, alpha: 0.8),
                  body: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
