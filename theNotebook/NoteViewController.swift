@@ -9,10 +9,8 @@
 import UIKit
 import CoreData
 
-class NoteViewController: UIViewController, UICollectionViewDelegate {
+class NoteViewController: ViewController, UICollectionViewDelegate {
    
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var note = Note.fetchNotes()
@@ -41,9 +39,6 @@ class NoteViewController: UIViewController, UICollectionViewDelegate {
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
-    }
     override func viewDidAppear(_ animated: Bool) {
         if (self.selectedIndex != 0) {
             print(self.selectedIndex)
@@ -89,22 +84,18 @@ extension NoteViewController : UICollectionViewDataSource{
         return note.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
-//        let note = notes[indexPath.row]
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NoteCell", for: indexPath) as! NoteCollectionViewCell
         
         cell.note = note[indexPath.item]
         
         return cell
     }
+   
 }
 
-extension NoteViewController: UIScrollViewDelegate
-{
+extension NoteViewController: UIScrollViewDelegate {
    
-
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let layout = self.collectionView?.collectionViewLayout as!
         UICollectionViewFlowLayout
@@ -120,11 +111,4 @@ extension NoteViewController: UIScrollViewDelegate
         targetContentOffset.pointee = offset
     }
     
-    
-    
 }
-
-
-
-
-
