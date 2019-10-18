@@ -34,7 +34,7 @@ class NoteAddDetailTableViewController: UITableViewController, UINavigationContr
             action: #selector(NoteAddDetailTableViewController.saveNote)
         )
         navigationItem.rightBarButtonItem = saveBarButton
-        navigationItem.title = "TEST"
+        navigationItem.title = "New Note"
     }
 
     @IBAction func addNotePicture(_ sender: UITapGestureRecognizer) {
