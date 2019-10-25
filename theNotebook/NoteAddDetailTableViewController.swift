@@ -64,7 +64,7 @@ class NoteAddDetailTableViewController: UITableViewController, UINavigationContr
             self.present(pickerController, animated: true, completion: nil)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         alertController.addAction(cameraAction)
         alertController.addAction(photosLibraryAction)
